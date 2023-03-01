@@ -6,6 +6,12 @@ class Openabf < Formula
   license "Apache-2.0"
   head "https://github.com/educelab/OpenABF.git", branch: "develop"
 
+  bottle do
+    root_url "https://ghcr.io/v2/educelab/code"
+    sha256 cellar: :any_skip_relocation, monterey:     "51616ba7249fcb29699851569749195a3f49bd1351340307425eb8ad225a2f63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c06bddfb3ec364cecb8827190eb5ca2a0c633dd892bb0ec0f30b37844bdf4b47"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "eigen" => [:build, :test]
 
