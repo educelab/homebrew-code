@@ -20,10 +20,12 @@ jobs:
           TAG="${{ github.event.client_payload.tag }}"
           URL="https://github.com/educelab/OpenABF/archive/refs/tags/${TAG}.tar.gz"
           SHA=$(curl -sL "$URL" | sha256sum | awk '{print $1}')
-          echo "url=${URL}" >> "${GITHUB_OUTPUT}"
-          echo "sha256=${SHA}" >> "${GITHUB_OUTPUT}"
-          echo "tag=${TAG}" >> "${GITHUB_OUTPUT}"
-          echo "version=${TAG#v}" >> "${GITHUB_OUTPUT}"
+          {
+            echo "url=${URL}"
+            echo "sha256=${SHA}"
+            echo "tag=${TAG}"
+            echo "version=${TAG#v}"
+          } >> "${GITHUB_OUTPUT}"
 
       - name: Update formula url and sha256
         run: |
@@ -37,6 +39,7 @@ jobs:
       - name: Remove stale bottle block
         run: |
           # Remove the bottle do...end block if present (bottles must be rebuilt for new versions)
+          # shellcheck disable=SC2016
           ruby -i -e '
             in_bottle = false
             indent = ""
