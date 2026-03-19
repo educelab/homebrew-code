@@ -1,8 +1,8 @@
 class Openabf < Formula
   desc "Single-header C++ library of angle-based flattening algorithms"
   homepage "https://github.com/educelab/OpenABF"
-  url "https://github.com/educelab/OpenABF/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "5f0628183235e56c2fdd29eeb342dfa2cfbfc86d4360c7c0aaae605a0349ee2a"
+  url "https://github.com/educelab/OpenABF/archive/refs/tags/v2.1.0-rc.1.tar.gz"
+  sha256 "1ee4c74b8ea49684213539a28c3336d643797ca5a5a768c28c9219ed1ad1c040"
   license "Apache-2.0"
   head "https://github.com/educelab/OpenABF.git", branch: "develop"
 
