@@ -17,7 +17,6 @@ class Openabf < Formula
   test do
     (testpath/"test.cpp").write <<~EOS
       #include <OpenABF/OpenABF.hpp>
-      #include <cmath>
 
       using ABF = OpenABF::ABFPlusPlus<float>;
       using LSCM = OpenABF::AngleBasedLSCM<float, ABF::Mesh>;
