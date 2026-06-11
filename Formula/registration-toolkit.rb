@@ -64,6 +64,6 @@ class RegistrationToolkit < Formula
   end
 
   test do
-    assert_match "--log-level", shell_output("#{bin}/rt_register --help")
+    assert_match "--log-level", shell_output("#{bin}/rt_register --help 2>&1")
   end
 end
