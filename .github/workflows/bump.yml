@@ -1,0 +1,35 @@
+name: Bump formulae
+
+on:
+  schedule:
+    # Daily at 08:00 UTC. brew bump is a no-op when nothing is outdated.
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+    inputs:
+      formulae:
+        description: "Formulae to check/bump (space-separated, blank = all)"
+        required: false
+  repository_dispatch:
+    types:
+      - openabf-released
+
+permissions:
+  contents: read
+
+jobs:
+  bump:
+    if: github.repository_owner == 'educelab'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Configure git user
+        uses: Homebrew/actions/git-user-config@main
+
+      - name: Bump packages
+        uses: Homebrew/actions/bump-packages@main
+        with:
+          token: ${{ secrets.BUMP_PR_PAT }}
+          fork: false
+          formulae: ${{ inputs.formulae || 'openabf registration-toolkit' }}
