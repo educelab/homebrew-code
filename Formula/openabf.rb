@@ -7,6 +7,13 @@ class Openabf < Formula
   revision 1
   head "https://github.com/educelab/OpenABF.git", branch: "develop"
 
+  bottle do
+    root_url "https://ghcr.io/v2/educelab/code"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a67335cdd9667bb1a4d66099df96c231506df896ad9cb5858099183f059c8204"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "50781c2abf1b57c442c603d426a6c461096704b56a87e056ea7c7e986b406c1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "14643ae2adda054d2f3f789ea601e1c705d0ed0fbca3879d19c654a41c5f1d41"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "eigen" => [:build, :test]
 
