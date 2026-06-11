@@ -2,7 +2,7 @@ class RegistrationToolkit < Formula
   desc "C++ utilities for image-to-image and image-to-mesh registration"
   homepage "https://github.com/educelab/registration-toolkit"
   url "https://github.com/educelab/registration-toolkit/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "a0b47765243cb58689da102326484cf5893a862ce4703e84cdc952c0190d315d"
+  sha256 "7e9fdea836673b89cae563268fbe6d3dc31b8075c7c0419af5b7d846398154e3"
   license "GPL-3.0-or-later"
   head "https://github.com/educelab/registration-toolkit.git", branch: "develop"
 
