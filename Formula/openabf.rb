@@ -4,6 +4,7 @@ class Openabf < Formula
   url "https://github.com/educelab/OpenABF/archive/refs/tags/v2.1.0-rc.1.tar.gz"
   sha256 "1ee4c74b8ea49684213539a28c3336d643797ca5a5a768c28c9219ed1ad1c040"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/educelab/OpenABF.git", branch: "develop"
 
   depends_on "cmake" => [:build, :test]
