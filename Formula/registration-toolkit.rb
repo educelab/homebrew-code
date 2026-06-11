@@ -10,6 +10,7 @@ class RegistrationToolkit < Formula
   depends_on "boost"
   depends_on "eigen"
   depends_on "itk"
+  depends_on "libtiff"
   depends_on "opencv"
   depends_on "spdlog"
   depends_on "vtk"
@@ -62,6 +63,6 @@ class RegistrationToolkit < Formula
   end
 
   test do
-    assert_match "Usage", shell_output("#{bin}/rt_register --help 2>&1", 1)
+    assert_match "--log-level", shell_output("#{bin}/rt_register --help")
   end
 end
