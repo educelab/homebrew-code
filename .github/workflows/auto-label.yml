@@ -19,6 +19,10 @@ jobs:
       - name: Add pr-pull label to passing bumper PRs
         uses: actions/github-script@v7
         with:
+          # GITHUB_TOKEN-applied labels do NOT trigger downstream
+          # workflows (GitHub's recursion guard). Use a PAT so the
+          # `labeled` event reaches publish.yml.
+          github-token: ${{ secrets.BUMP_PR_PAT }}
           script: |
             const run = context.payload.workflow_run;
             const prs = run.pull_requests || [];
