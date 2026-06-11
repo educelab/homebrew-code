@@ -6,6 +6,10 @@ class RegistrationToolkit < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/educelab/registration-toolkit.git", branch: "develop"
 
+  # Upstream uses CMake FetchContent for smgl, bvh, libcore, and OpenABF,
+  # each pinned to an immutable commit/tag.
+  allow_network_access! :build
+
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "eigen"
