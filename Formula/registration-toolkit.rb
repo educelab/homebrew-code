@@ -4,6 +4,7 @@ class RegistrationToolkit < Formula
   url "https://github.com/educelab/registration-toolkit/archive/refs/tags/v1.8.0.tar.gz"
   sha256 "e45e139d26b0f286e40af688f949337db8de4d44af6da3b6536a82ccf270994c"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/educelab/registration-toolkit.git", branch: "develop"
 
   bottle do
