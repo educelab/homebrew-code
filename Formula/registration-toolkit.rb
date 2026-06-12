@@ -6,6 +6,13 @@ class RegistrationToolkit < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/educelab/registration-toolkit.git", branch: "develop"
 
+  bottle do
+    root_url "https://ghcr.io/v2/educelab/code"
+    sha256 cellar: :any, arm64_sequoia: "993afa491a56313b3b2e09b655d8bf647b879de66a0a9532432a9849f0aa05fd"
+    sha256 cellar: :any, arm64_sonoma:  "3cddc7601f4ef312ca283713c3088206b68ea3c57ea704c59c3e21f3da8327b3"
+    sha256 cellar: :any, x86_64_linux:  "817b58b912b45567c47c96302fd38bb2e0fe727ee6107c62566c1b793708b998"
+  end
+
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "eigen"
