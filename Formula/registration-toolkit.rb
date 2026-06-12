@@ -9,9 +9,10 @@ class RegistrationToolkit < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/educelab/code"
-    sha256 cellar: :any, arm64_sequoia: "993afa491a56313b3b2e09b655d8bf647b879de66a0a9532432a9849f0aa05fd"
-    sha256 cellar: :any, arm64_sonoma:  "3cddc7601f4ef312ca283713c3088206b68ea3c57ea704c59c3e21f3da8327b3"
-    sha256 cellar: :any, x86_64_linux:  "817b58b912b45567c47c96302fd38bb2e0fe727ee6107c62566c1b793708b998"
+    sha256 cellar: :any, arm64_tahoe:   "e6efce31e2b62bf017e9034c52d9de74f4c6d27b0c2dc1158f6193870e2da3e9"
+    sha256 cellar: :any, arm64_sequoia: "bd9e4a79902c19b71c60a0903d6e2d3986c5ed0130505b82661de85f1193fd56"
+    sha256 cellar: :any, arm64_sonoma:  "f5b24f3150799a62bfc1d0c8d72138f49798038257a9c2ce01be1be6d674ebe5"
+    sha256 cellar: :any, x86_64_linux:  "fd14921d33a47105216f788a02c74b120ebe3e7e08e140ec29c83874fdfef175"
   end
 
   depends_on "cmake" => :build
