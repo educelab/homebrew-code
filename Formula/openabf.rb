@@ -8,10 +8,10 @@ class Openabf < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/educelab/code"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "45bdc5952397540e69122fd54fed71c5e1a41d887f46f2a5993ce37c5ef11cff"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e56d19babb2d78bbb569a5daead065578416e9071e7d2720f9f72c0736f2ceb1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3c16635da4b1bc12520281c86c058d1df68c5ea5c00a7030d09c5ae438357dd3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "39d3dc87d710d26f00ac2efe522716ebe5bd2ebc090d62a107979e732246535b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "356983c2554220529c48531c3cb07604684f934deb41cc9142a9f302b32b03bc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "64af670046e3532d96433531995d67aefdc1130848d583fef595f8d8d164b214"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ad9dacdedfc545300d1f8d79cd203c14926d5f257c8b75605dcdd5a93b1d7230"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "71f4bcf4cdf1b12f850c529124dc341db586ebe7626cee49972c506a46276061"
   end
 
   depends_on "cmake" => [:build, :test]
