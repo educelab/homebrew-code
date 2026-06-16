@@ -23,12 +23,16 @@ jobs:
     steps:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: true
 
       - name: Configure git user
         uses: Homebrew/actions/git-user-config@main
 
       - name: Bump packages
         uses: Homebrew/actions/bump-packages@main
+        env:
+          HOMEBREW_NO_INSTALL_FROM_API: "1"
         with:
           token: ${{ secrets.BUMP_PR_PAT }}
           fork: false
