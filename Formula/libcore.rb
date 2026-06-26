@@ -1,4 +1,4 @@
-class EducelabLibcore < Formula
+class Libcore < Formula
   desc "C++ library of types and utilities shared across EduceLab projects"
   homepage "https://github.com/educelab/libcore"
   url "https://github.com/educelab/libcore/archive/refs/tags/v0.3.0-rc.1.tar.gz"
