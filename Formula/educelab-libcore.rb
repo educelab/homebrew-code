@@ -6,6 +6,14 @@ class EducelabLibcore < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/educelab/libcore.git", branch: "develop"
 
+  bottle do
+    root_url "https://ghcr.io/v2/educelab/code"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9c31fbabe1c02a3026460302ce10b6b2aaa7bd9f372320ae2a02257e82a09a0b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "91b161a4a8754cb37c9689d240f5e6c0d9c30c9c2b1ada90681e51d44fd72ead"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "15524401d674e28f12a5334cf71c166faca110fd80de1a551a24008d45a78b69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3984426bd24ae0500241f722c7370f38dd6ea5c43e77ac231bce6854f1960b92"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   def install
