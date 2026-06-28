@@ -36,4 +36,4 @@ jobs:
         with:
           token: ${{ secrets.BUMP_PR_PAT }}
           fork: false
-          formulae: ${{ inputs.formulae || 'openabf registration-toolkit' }}
+          formulae: ${{ inputs.formulae || 'libcore openabf registration-toolkit smgl' }}
