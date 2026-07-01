@@ -6,6 +6,14 @@ class Smgl < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/educelab/smgl.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/educelab/code"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8436780a3c77a5e5a0533f51e9bc9443b424a703580479c879b3b1fcc5510045"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "264e9e180008cb0b10cd0acbb9e4d40ec601155863c2a94da402845d5e5aa676"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "89356325bed77761e25f69c6c096b1af9a9f8d82178b2e82dfbb89ffef32be9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d80ecadd1c651f87d6ce601446420c124c096882d87908b235a6d94606404af"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "nlohmann-json"
 
